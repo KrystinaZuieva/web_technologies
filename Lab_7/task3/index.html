@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Form Submission</title>
+</head>
+<body>
+    <form method="POST" enctype="multipart/form-data" action="#">
+        <h2 class="default">Заповніть форму</h2>
+        <h2 class="alternative">Ми вдячні вам</h2>
+        
+        <section class="fields">
+            <div class="left-side">
+                <label>
+                    <p>Login:</p>
+                    <input type="text" name="login" required>
+                </label>
+                <label>
+                    <p>Password:</p>
+                    <input type="password" name="password" class="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+                </label>
+                <label>
+                    <p>First Name:</p>
+                    <input type="text" name="first_name" required>
+                </label>
+            </div>
+            
+            <div class="right-side">
+                <label>
+                    <p>Email:</p>
+                    <input type="email" name="email" required pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" autocomplete="off">
+                </label>
+                <label>
+                    <p>Type Password Again:</p>
+                    <input type="password" name="confirm_password" class="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+                </label>
+                <label>
+                    <p>Last Name:</p>
+                    <input type="text" name="last_name" required>
+                </label>
+            </div>
+        </section>
+        
+        <label>
+            <p class="message">About Me:</p>
+            <textarea name="message" tabindex="6" required></textarea>
+        </label>
+
+        <div class="buttons">
+            <button type="reset">Reset</button>
+            <button type="submit">Ok</button>
+        </div>
+    </form>
+</body>
+</html>

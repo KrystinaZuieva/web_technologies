@@ -1,0 +1,33 @@
+body {
+    height: 380px;
+}
+
+.border-div{
+    width: 30%;
+    height: 50%;
+    position: relative;
+    margin-inline: auto;
+}
+.border-div div{
+    padding: 5%;
+    margin: 3%;
+    text-align: center;
+}
+
+.block1 {
+    display: inline-block;
+    background: green;
+    padding: 10px 20px;
+    margin: 5px;
+}
+
+.block2 {
+    background: blue;
+    padding: 20px;
+    margin-top: 20px;
+    visibility: hidden;
+}
+
+.block1:hover ~ .block2 {
+    visibility:visible;
+}

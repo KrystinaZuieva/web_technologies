@@ -1,0 +1,220 @@
+.horizontal{
+display: block;
+font-size: 15px;
+position: fixed;
+top:0;
+right: 0;
+
+list-style-type: none;
+margin: 0;
+padding: 0;
+width: 128px;
+height: 30px;
+overflow: hidden;
+background-color: #333;
+}
+.horizontal>li{
+    display: inline-block;
+    height: 30px;
+    width: 40px;
+    background-size: 28px 28px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.horizontal>li>a{
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+li:hover{
+    background-color: rgb(21, 226, 21);
+}
+
+.horizontal li:first-child{
+    background-image: url(../img/home_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png);
+    
+}
+.horizontal li:nth-child(2){
+    background-image: url(../img/settings_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png);
+}
+.horizontal li:nth-child(3){
+    background-image: url(../img/menu_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png);
+}
+.horizontal li:nth-child(1):has(a:active){
+    background-color: rgb(17, 134, 3);
+}
+.horizontal li:nth-child(2):has(a:active){
+    background-color: rgb(17, 134, 3);
+}
+.horizontal li:nth-child(3):has(a:active){
+    background-color: rgb(17, 134, 3);
+}
+.embedded-horizontal{
+    list-style-type: none;
+    background-color: #333;
+    position: sticky;
+    top: 14px;
+    right: 0px;
+    padding: 10px 0 0;
+    display: none;
+    margin: 22px 0 0 1px;
+    width: 100px;
+    float: right;
+
+}
+.embedded-horizontal>li{
+    display: block;
+    margin-block: 5px;
+}
+.embedded-horizontal>li a{
+    display: block;
+    margin: 5px;
+}
+a{
+    color: white;
+    text-decoration-line: none;
+}
+a:visited{
+    color: white;
+    text-decoration-line: none;
+}
+ul:has(li:last-child:hover)+ul.embedded-horizontal{
+    display: block;
+}
+.embedded-horizontal:hover{
+    display: block;
+}
+ul:has(+ .embedded-horizontal:hover) li:last-child{
+    background-color: darkgreen;
+}
+
+.vertical{
+    display: block;
+    font-size: 15px;
+    position: fixed;
+    top:100px;
+    left: 0;
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100px;
+    height: 120px;
+    overflow: hidden;
+    background-color: #333;
+}
+.vertical>li{
+    display: block;
+    
+    height: 40px;
+    background-size: 28px 28px;
+    background-position: left;
+    background-repeat: no-repeat;
+}
+.vertical>li a{
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+.vertical>li span{
+    display: block;
+    margin-right: auto;
+    text-align: right;
+    padding:11px 10px 0 0;
+}
+.first-embedded-vertical{
+    list-style-type: none;
+    background-color: #333;
+    position: absolute;
+    height: 120px;
+    top: 84px;
+    left: 100px;
+    display: none;
+    padding-inline: 0;
+}
+.first-embedded-vertical>li a, .second-embedded-vertical>li a, .third-embedded-vertical>li a{
+    display: block;
+    margin: 5px;
+}
+.second-embedded-vertical{
+    list-style-type: none;
+    background-color: #333;
+    position: absolute;
+    height: 120px;
+    top: 84px;
+    left: 166px;
+    display: none;
+    padding-inline: 0;
+    
+    
+}
+.third-embedded-vertical{
+    list-style-type: none;
+    background-color: #333;
+    position: absolute;
+    height: 120px;
+    top: 84px;
+    left: 232px;
+     display: none;
+     padding-inline: 0;
+    
+    
+}
+.vertical li:first-child{
+    background-image: url(../img/home_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png);
+    
+}
+.vertical li:nth-child(2){
+    background-image: url(../img/settings_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png);
+}
+.vertical li:nth-child(3){
+    background-image: url(../img/menu_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png);
+}
+.vertical li:nth-child(1):has(a:active){
+    background-color: rgb(17, 134, 3);
+}
+.vertical li:nth-child(2):has(a:active){
+    background-color: rgb(17, 134, 3);
+}
+.vertical li:nth-child(3):has(a:active){
+    background-color: rgb(17, 134, 3);
+}
+ul:has(li:last-child:hover)+ul.first-embedded-vertical{
+    display: block;
+}
+.first-embedded-vertical:hover{
+    display: block;
+}
+ul:has(+ .first-embedded-vertical:hover) li:last-child{
+    background-color: darkgreen;
+}
+
+
+ul:has(li:last-child:hover)+ul.second-embedded-vertical{
+    display: block;
+}
+.second-embedded-vertical:hover{
+    display: block;
+}
+ul:has(~ .second-embedded-vertical:hover)>li:last-child{
+    background-color: darkgreen;
+}
+ul:has(+ .second-embedded-vertical:hover){
+    display: block;
+}
+ul:has(+ .second-embedded-vertical+.third-embedded-vertical:hover){
+    display: block;
+}
+
+ul:has(li:last-child:hover)+ul.third-embedded-vertical{
+    display: block;
+}
+.third-embedded-vertical:hover{
+    display: block;
+}
+ul:has(~ .third-embedded-vertical:hover)>li:last-child{
+    background-color: darkgreen;
+}
+ul:has(+ .third-embedded-vertical:hover){
+    display: block;
+}
