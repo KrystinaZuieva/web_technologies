@@ -1,0 +1,169 @@
+html {
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    background-image: linear-gradient(to right,lightcoral 0%, lightseagreen 100%);
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+}
+
+.wrapper {
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    width: 480px;
+    height: max-content;
+    justify-content: center;
+    align-items: center;
+    /*border: 2px solid #424242;*/
+    background: #fffff6;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.wrapper > * {
+    flex: 1;
+    width: 100%;
+}
+
+.now {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 1px solid #424242;;
+    padding: 10px 0 0 20px;
+}
+
+.now > * {
+    flex: 1;
+}
+
+.now .place {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+    padding: 5px 0 0 5px;
+}
+
+.now-block {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.now-block > * {
+    flex: 1;
+    margin: 5px;
+}
+
+.info {
+    padding: 5px;
+}
+
+.info > * {
+    font-weight: lighter;
+    margin: 0;
+    flex: 1;
+}
+
+.now-weather {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+.detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 0 0 10px 5px;
+}
+
+.detail > * {
+    color: #424242;
+    font-weight: lighter;
+    margin: 0;
+}
+
+.days {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.day {
+    width: 100%;
+    flex: 1;
+    margin: 5px;
+    border-bottom: 1px solid #424242;;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.day:last-child {
+    border-bottom: none;
+}
+
+.day > * {
+    flex: 1;
+}
+
+.temperature {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.day-weather {
+    flex: 2;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.now-temperature {
+    font-size: 35px;
+    font-weight: bold;
+}
+.date{
+    color: #424242;
+    font-weight: lighter;
+}
+.min-temperature {
+    color: #424242;
+    font-weight: lighter;
+}
+.max-temperature {
+    color: #424242;
+    font-weight: bold;
+}
+.pollen-count{
+    color: #424242;
+    font-weight: lighter;
+}
