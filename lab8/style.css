@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+button {
+    padding: 0.4rem 0.8rem;
+    border: none;
+    border-radius: 0.25rem;
+    background: #3b82f6;
+    color: white;
+    cursor: pointer;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* -- Статистика -- */
+#stats {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+/* -- Сітка поля -- */
+.board {
+    display: grid;
+    gap: 0.5rem;
+    width: 100%;
+    max-width: 600px;
+}
+
+/* -- Картка -- */
+.card {
+    perspective: 600px;
+    width: 100%;
+    padding-top: 100%; /* квадрат */
+    position: relative;
+}
+
+.card-inner {
+    position: absolute;
+    inset: 0;
+    transition: transform 0.4s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-face {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 700;
+    border-radius: 0.5rem;
+    backface-visibility: hidden;
+}
+
+.card-face.front {
+    background: #ffffff;
+    transform: rotateY(180deg);
+}
+
+.card-face.back {
+    background: #475569;
+    color: #f1f5f9;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* -- Модальне вікно -- */
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.modal-content {
+    background: #ffffff;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+}
+
+input[type="number"],
+input[type="text"],
+select {
+    width: 100%;
+    padding: 0.25rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 0.25rem;
+}

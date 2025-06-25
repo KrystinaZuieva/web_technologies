@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Pair Game</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<h1>Memory Pair Game</h1>
+
+<button id="openSettings">Налаштування гри</button>
+
+<!-- --- Статистика гри --- -->
+<div id="stats" class="hidden">
+    <span id="timer">03:00</span>
+    <span id="currentPlayer">Player 1 ходить</span>
+    <span id="moves">Ходи: 0</span>
+    <button id="restartBtn">Restart</button>
+</div>
+
+<!-- --- Ігрове поле --- -->
+<div id="board" class="board"></div>
+
+<!-- --- Результати --- -->
+<div id="results" class="hidden"></div>
+
+<!-- --- Модальне вікно налаштувань --- -->
+<div id="settingsModal" class="modal">
+    <div class="modal-content">
+        <h2>Налаштування гри</h2>
+
+        <label>Рядки:
+            <input id="rowsInput" type="number" min="4" value="4" />
+        </label>
+
+        <label>Стовпці:
+            <input id="colsInput" type="number" min="3" value="3" />
+        </label>
+
+        <label>Складність:
+            <select id="difficultySelect">
+                <option value="easy">Easy (3:00)</option>
+                <option value="normal">Normal (2:00)</option>
+                <option value="hard">Hard (1:00)</option>
+            </select>
+        </label>
+
+        <label>Гравців:
+            <select id="playersSelect">
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select>
+        </label>
+
+        <label id="player1Label">Ім'я гравця 1:
+            <input id="name1Input" value="Player 1" />
+        </label>
+
+        <label id="player2Label" class="hidden">Ім'я гравця 2:
+            <input id="name2Input" value="Player 2" />
+        </label>
+
+        <label>Раунди:
+            <input id="roundsInput" type="number" min="1" value="1" />
+        </label>
+
+        <div class="modal-buttons">
+            <button id="resetSettings">Скинути</button>
+            <button id="startGame">Розпочати гру</button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
