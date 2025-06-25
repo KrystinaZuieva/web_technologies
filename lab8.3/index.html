@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kanban Board</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+</head>
+<body>
+<header>
+    <h1>Simple Kanban Board</h1>
+</header>
+
+<section class="board" aria-label="Kanban Board">
+    <div class="column" aria-label="To Do">
+        <h2>To&nbsp;Do</h2>
+        <div class="task-list" data-status="todo">
+            <div class="task" draggable="true" id="task1">Design login page</div>
+            <div class="task" draggable="true" id="task2">Set up database schema</div>
+        </div>
+    </div>
+
+    <div class="column" aria-label="In Progress">
+        <h2>In&nbsp;Progress</h2>
+        <div class="task-list" data-status="in-progress">
+            <div class="task" draggable="true" id="task3">Implement API endpoints</div>
+        </div>
+    </div>
+
+    <div class="column" aria-label="Done">
+        <h2>Done</h2>
+        <div class="task-list" data-status="done">
+            <div class="task" draggable="true" id="task4">Create project repository</div>
+        </div>
+    </div>
+</section>
+</body>
+</html>

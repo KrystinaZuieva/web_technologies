@@ -1,0 +1,78 @@
+:root {
+    --column-bg: #e2e4e6;
+    --column-header: #dfe1e6;
+    --task-bg: #ffffff;
+    --task-shadow: rgba(0, 0, 0, 0.15);
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    background: #f4f5f7;
+}
+
+header {
+    text-align: center;
+    padding: 1rem;
+    background: #0052cc;
+    color: #fff;
+}
+
+.board {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 1rem;
+    overflow-x: auto;
+}
+
+.column {
+    background: var(--column-bg);
+    border-radius: 8px;
+    flex: 0 0 280px;
+    display: flex;
+    flex-direction: column;
+}
+
+.column h2 {
+    margin: 0;
+    padding: 0.75rem;
+    text-align: center;
+    background: var(--column-header);
+    border-radius: 8px 8px 0 0;
+    font-size: 1.1rem;
+}
+
+.task-list {
+    flex-grow: 1;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    min-height: 120px;
+}
+
+.task-list[aria-dropeffect="move"] {
+    outline: 2px dashed #6c8cff;
+}
+
+.task {
+    background: var(--task-bg);
+    border-radius: 6px;
+    padding: 0.8rem;
+    cursor: grab;
+    box-shadow: 0 1px 2px var(--task-shadow);
+    user-select: none;
+    transition: transform 0.1s ease;
+}
+
+.task.dragging {
+    opacity: 0.5;
+    transform: rotate(2deg);
+}
+
+@media (max-width: 600px) {
+    .column {
+        flex: 0 0 220px;
+    }
+}
